@@ -62,12 +62,12 @@ execute() {
 }
 get_binaries() {
   case "$PLATFORM" in
-    darwin/amd64) BINARIES="dcRules" ;;
-    darwin/arm64) BINARIES="dcRules" ;;
-    linux/amd64) BINARIES="dcRules" ;;
-    linux/arm64) BINARIES="dcRules" ;;
-    windows/amd64) BINARIES="dcRules" ;;
-    windows/arm64) BINARIES="dcRules" ;;
+    darwin/amd64) BINARIES="goRules" ;;
+    darwin/arm64) BINARIES="goRules" ;;
+    linux/amd64) BINARIES="goRules" ;;
+    linux/arm64) BINARIES="goRules" ;;
+    windows/amd64) BINARIES="goRules" ;;
+    windows/arm64) BINARIES="goRules" ;;
     *)
       log_crit "platform $PLATFORM is not supported.  Make sure this script is up-to-date and file request at https://github.com/${PREFIX}/issues/new"
       exit 1
@@ -335,7 +335,7 @@ EOF
 PROJECT_NAME="go-rules"
 OWNER=peakle
 REPO="go-rules"
-BINARY=dcRules
+BINARY=goRules
 FORMAT=zip
 OS=$(uname_os)
 ARCH=$(uname_arch)

@@ -28,7 +28,7 @@ func (p platformInfo) String() string { return p.goos + "-" + p.goarch }
 func main() {
 	log.SetFlags(0)
 
-	versionFlag := flag.String("version", "", "dcRules release version")
+	versionFlag := flag.String("version", "", "goRules release version")
 	flag.Parse()
 
 	version := strings.TrimLeft(*versionFlag, "v")

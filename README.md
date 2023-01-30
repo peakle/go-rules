@@ -42,7 +42,7 @@ Full installation example: https://github.com/peakle/dc-rules-example
            ```
         2. Run lint:
            ``` shell
-           dcRules ./...
+           goRules ./...
            ```
     3. Like file watcher in Goland IDE (will work for golangci-lint >v1.46.0):
         1. add golangci-lint as `File Watcher` in IDE (Preferences -> Tools -> File Watchers -> Add)

@@ -16,7 +16,7 @@ builds:
     goarch:
       - amd64
       - arm64
-    main: ./cmd/dcRules
+    main: ./cmd/goRules
 
 archives:
   - format: zip
