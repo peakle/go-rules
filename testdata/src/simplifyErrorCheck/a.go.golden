@@ -1,0 +1,54 @@
+package simplifyErrorCheck
+
+type foo string
+
+func a() {
+	var (
+		bar foo
+		err error
+	)
+
+	if err = bar.Error(); err != nil {
+		return
+	}
+
+	if err = bar.Error(); err != nil {
+		return
+	}
+
+	return
+}
+
+func b() {
+	var (
+		err error
+		bar foo
+	)
+
+	if err = bar.Error(); err != nil {
+		return
+	}
+}
+
+func myFooFoo() {
+	if err := foo("").Error(); err != nil {
+		return
+	}
+
+	print(123)
+}
+
+func negative() {
+	err, err2 := foo("").Error(), foo("").Error()
+	if err != nil {
+		print(123)
+	}
+
+	if err2 != nil {
+		print(332)
+	}
+}
+
+func (foo) Error() error {
+	return nil
+}
