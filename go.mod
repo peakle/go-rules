@@ -3,6 +3,7 @@ module github.com/peakle/go-rules
 go 1.17
 
 require (
+	github.com/peakle/go-rules/pkg v0.0.1
 	github.com/quasilyte/go-ruleguard v0.3.18
 	github.com/quasilyte/go-ruleguard/dsl v0.3.22
 	golang.org/x/tools v0.1.12
