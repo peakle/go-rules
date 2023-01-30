@@ -2,7 +2,7 @@
 
 Go rules linter
 
-[![Tests](https://github.com/peakle/go-rules/workflows/Tests/badge.svg)](https://github.com/peakle/go-rules/blob/main/.github/workflows/ci.yml)
+[![Tests](https://github.com/peakle/go-rules/workflows/Tests/badge.svg)](https://github.com/peakle/go-rules/blob/master/.github/workflows/ci.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/peakle/go-rules)](https://goreportcard.com/report/github.com/peakle/go-rules)
 [![Go Reference](https://pkg.go.dev/badge/github.com/peakle/go-rules.svg)](https://pkg.go.dev/github.com/peakle/go-rules)
 
@@ -15,7 +15,7 @@ Full installation example: https://github.com/peakle/dc-rules-example
       go get -v github.com/peakle/go-rules
       ```
 2. Create rules.go file in your project like
-   in [example](https://github.com/peakle/go-rules/tree/main/example/rules.go)
+   in [example](https://github.com/peakle/go-rules/tree/master/example/rules.go)
 3. Add linter to your pipeline:
     1. Like another one check in golangci-lint (will work for golangci-lint >v1.46.0):
 
