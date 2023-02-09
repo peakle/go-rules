@@ -1,0 +1,13 @@
+package unnecessaryErrorCall
+
+import (
+	"errors"
+	"fmt"
+)
+
+func foo() error {
+	fmt.Println(fmt.Errorf("foo: %s", "bar"))            // want `use fmt.Errorf instead of nested calls`
+	fmt.Println(fmt.Errorf("foo: %s, %s", "bar", "boo")) // want `use fmt.Errorf instead of nested calls`
+
+	return fmt.Errorf("foo: %s", "bar") // want `use fmt.Errorf instead of nested calls`
+}

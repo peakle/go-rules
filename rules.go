@@ -17,6 +17,16 @@ func unusedFormatting(m dsl.Matcher) {
 		Report(`use function alternative without formatting`)
 }
 
+//doc:summary	Detects unnecessary nested calls for errors.New
+//doc:tags		style
+//doc:before	errors.New(fmt.Sprintf("foo: %s", "bar"))
+//doc:after		fmt.Errorf("foo: %s", "bar")
+func nestedErrorCall(m dsl.Matcher) {
+	m.Match(`errors.New(fmt.Sprintf($*args))`).
+		Suggest(`fmt.Errorf($args)`).
+		Report(`use fmt.Errorf instead of nested calls`)
+}
+
 //doc:summary   Detects unused formatting functionality
 //doc:tags      style
 //doc:before    errors.WithMessagef(err, "on example")
