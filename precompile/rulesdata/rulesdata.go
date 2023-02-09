@@ -28,7 +28,7 @@ var PrecompiledRules = &ir.File{
 		},
 		{
 			Line:        24,
-			Name:        "unnecessaryErrorCall",
+			Name:        "nestedErrorCall",
 			MatcherName: "m",
 			DocTags:     []string{"style"},
 			DocSummary:  "Detects unnecessary nested calls for errors.New",
